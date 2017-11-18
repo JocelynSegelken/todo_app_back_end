@@ -1,4 +1,6 @@
 class TodoController < ApplicationController
-def index
+  def index
+  end
+  def show
   end
 end
