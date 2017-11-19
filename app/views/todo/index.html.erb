@@ -2,33 +2,16 @@
       <img class="puppy" src=></img>
       Productive Human List
     </h1>
-            <ul>
-        <li>
-            <input type="checkbox">
- <a href="show/1">Make the curriculum</a>
- <span class="pomodoro-estimate">4 Pomodoros</span>
-        </li>
-        <li>
-            <input type="checkbox">
-            <a href="show/2">Buy Workshop Supplies</a>
- <span class="pomodoro-estimate">4 Pomodoros</span>
-        </li>
-        <li>
-            <input type="checkbox">
-            Walk doggos
-        </li>
-        <li>
-            <input type="checkbox">
-            Hang up clothes
-        </li>
-        <li>
-            <input type="checkbox">
-            Shake it off (Start your day)
-        </li>
-            </ul>      
-            
-            <div id="new-todo-block">
-      <input class="text-input" id="new-todo-description" type="text" placeholder="Add a new todo...">
-      <input class="text-input" id="new-pomodoro-estimate" type="number" placeholder="Pomodoro estimate...">
-      <input class="button" id="add-new-todo-button" type="submit" value="Add todo">
-    </div>
+<ul class="card">
+  <% @todos.each do |todo| %>
+    <li>
+      <input type="checkbox" name=""/>
+      <a href="show/<%= todo.id %>"><%= todo.description %></a>
+      <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
+    </li>
+  <% end %>
+</ul>
+
+<div id="new-todo-block">
+<a href="/todo/new" class="button add-new-todo-button" id="add-new-todo-button">Add a todo</a>
+</div>
